@@ -1,0 +1,120 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive Typography */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #333;
+    overflow: hidden;
+}
+
+.auth_container, .user_container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.auth_container:hover, .user_container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.auth_form {
+    margin-bottom: 20px;
+}
+
+.auth_form h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.auth_form input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.auth_form input:focus {
+    border-color: #6e8efb;
+}
+
+.auth_form button, #logout_btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #6e8efb;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.auth_form button:hover, #logout_btn:hover {
+    background-color: #a777e3;
+    transform: scale(1.05);
+}
+
+.auth_form button:active, #logout_btn:active {
+    background-color: #4f69ff;
+    transform: scale(0.95);
+}
+
+.user_container h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+}
+
+@media (min-width: 600px) {
+    .auth_container, .user_container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .auth_container, .user_container {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .auth_container, .user_container {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .auth_container, .user_container {
+        width: 30%;
+    }
+}
